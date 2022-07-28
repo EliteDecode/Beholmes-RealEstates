@@ -1,0 +1,13 @@
+.hide {
+  margin-top: -100%;
+  transition: 0.8s ease all;
+}
+
+.show {
+  margin-top: 0%;
+  transition: 0.5s ease all;
+}
+.filter,
+.border {
+  overflow: hidden;
+}

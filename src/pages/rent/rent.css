@@ -1,0 +1,26 @@
+.banner-cover {
+  background: url("../../assets/rent.jpg");
+  background-size: 100% 100%;
+  width: 40%;
+  background-color: rgba(0, 0, 0, 0.1);
+  background-blend-mode: overlay;
+  border-radius: 10px;
+}
+
+.svg {
+  width: 15%;
+}
+
+@media only screen and (min-device-width: 0px) and (max-device-width: 715px) {
+  .banner-cover {
+    display: none;
+  }
+
+  .load {
+    margin-top: -30%;
+  }
+
+  .svg {
+    width: 50% !important;
+  }
+}

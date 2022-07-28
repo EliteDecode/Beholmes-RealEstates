@@ -1,0 +1,18 @@
+.banner-covers {
+  background: url("../../assets/ban.jpg");
+  background-size: 100% 100%;
+  width: 40%;
+  background-color: rgba(0, 0, 0, 0.1);
+  background-blend-mode: overlay;
+  border-radius: 10px;
+}
+
+@media only screen and (min-device-width: 0px) and (max-device-width: 715px) {
+  .banner-covers {
+    display: none;
+  }
+}
+
+.border-right {
+  border-right: 2px solid rgb(193, 193, 193);
+}

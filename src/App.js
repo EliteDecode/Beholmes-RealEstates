@@ -1,25 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect } from "react";
+import Navbar from "./components/navbar/Navbar";
+import Filter from "./components/filter/Filter";
+import Rent from "./pages/rent/Rent";
+import Sale from "./pages/sale/Sale";
+import Loading from "./components/loader/Loading";
 
-function App() {
+import { useGlobalContext } from "./context";
+
+const App = () => {
+  const { loading, loadSale, loadRent } = useGlobalContext();
+
+  useEffect(() => {
+    loadRent();
+    loadSale();
+  }, []);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Navbar />
+
+      {loading && <Loading />}
+      <Sale simplified />
+      <Rent simplified />
+    </>
   );
-}
+};
 
 export default App;
